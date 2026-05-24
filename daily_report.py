@@ -1,12 +1,16 @@
 import os
 import requests
+
 from bs4 import BeautifulSoup
 from openai import OpenAI
 from datetime import date
 from pathlib import Path
+from dotenv import load_dotenv
 
-API_KEY = os.environ.get("API_KEY")
-BASE_URL = os.environ.get("BASE_URL")
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
+BASE_URL = os.getenv("BASE_URL")
 
 DEFAULT_MODEL = "gpt-4o-mini"
 
